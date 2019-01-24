@@ -38,7 +38,7 @@ internal data class TargetType(
     val typeVariables: List<TypeVariableName>
 ) {
     val name = element.className.simpleName
-    val builderName = element.simpleName.toString().toAutoDslBuilderName()
+    val builderName = element.qualifiedName.toString().toAutoDslBuilderName()
     val isInternal = proto.visibility == INTERNAL
 
     companion object {
